@@ -2,7 +2,8 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => res.send("Hello, world!"));
+const indexRouter = require("./routes/indexRouter.js");
+app.use("/", indexRouter);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, (error) => {
