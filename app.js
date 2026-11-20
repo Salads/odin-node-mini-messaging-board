@@ -2,6 +2,8 @@ const path = require("node:path");
 const express = require("express");
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+
 const assetsPath = path.join(__dirname, "static");
 app.use(express.static(assetsPath));
 

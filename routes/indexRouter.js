@@ -16,6 +16,18 @@ const messages = [
 ];
 
 indexRouter.get("/", (req, res) => res.render("index", { messages: messages }));
-indexRouter.get("/new", (req, res) => res.send("Hello, New Message Page!"));
+indexRouter.get("/new", (req, res) => res.render("new"));
+indexRouter.post("/new", (req, res) => {
+
+  messages.push({
+    text: req.body.message,
+    user: req.body.name,
+    added: new Date()
+  });
+
+  console.log("Submit");
+  console.log(req.body);
+  res.redirect("/");
+});
 
 module.exports = indexRouter;

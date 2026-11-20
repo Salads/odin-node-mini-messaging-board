@@ -45,13 +45,15 @@ body {
 
 .btn-primary {
 	background-color: rgb(34, 241, 241);
-	padding: 4px 12px;
+	padding: 8px 14px;
 	text-decoration: none;
 	box-shadow: none;
 	width: fit-content;
 	border-radius: 6px;
 	color: black;
 	font-weight: bold;
+	outline: none;
+	border: none;
 
 	&:hover {
 		background-color: rgb(34, 187, 187);
@@ -62,4 +64,25 @@ body {
 			box-shadow: none;
 		}
 	}
+}
+
+.new-message-form {
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	gap: 8px;
+	padding: 16px;
+	border-radius: 12px;
+
+	background-color: white;
+}
+
+.form-field {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+input {
+	min-width: 250px;
 }
