@@ -1,4 +1,7 @@
-<div>
-	<p><%= message.user %>: <%= message.text %></p>
-	<p><%= message.added %></p>
+<div class="message-container">
+	<div class="message">
+		<p><%= message.user %>:</p>
+		<p><%= message.text %></p>
+	</div>
+	<p><%= message.added.toLocaleDateString() %></p>
 </div>
