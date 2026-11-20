@@ -11,3 +11,9 @@ app.listen(PORT, (error) => {
 	}
 	console.log(`Server Running - Listening on localhost:${PORT}`);
 });
+
+// Handle Ctrl+C Force Close
+process.on('SIGINT', () => {
+	console.log('Server Closing Forcibly');
+	process.exit(0);
+});   
